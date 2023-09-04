@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/table.css">
+    <script src="scripts/validate.js"></script>
+    <title>ЛР1 по Вебу</title>
+</head>
+<body>
+    <div>
+        <img src="static/lab1_web_chart.jpg"/>
+        <form action="../server/main.php" method="post">
+            <label for="x_checkbox">Значение X</label>
+            <div id="x_checkbox">
+                <script src="scripts/checkboxDisplay.js"></script>
+            </div>
+
+            <p onchange="setSendAvailability()">Значение Y &isin; (-3; 5)<input type="text" name="y" /></p>
+            <p onchange="setSendAvailability()">Значение R &isin; (1; 4)<input type="text" name="r" /></p>
+            <input id="send_button" type="submit" value="Проверить попадание точки в область" disabled/>
+        </form>
+
+    </div>
+</body>
+</html>
