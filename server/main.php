@@ -45,16 +45,8 @@ try {
     $scriptWorkTime = $time_end - $time_start;
 
     $rowsCount = (isset($_COOKIE["rows"]) ? count($_COOKIE["rows"]) : 0);
-    echo $rowsCount;
-//    $rowsCount = 0;
 
     $rowName = "r.$rowsCount";
-//    setcookie("rows[$rowName][r]", $r);
-//    setcookie("rows[$rowName][x]", $x);
-//    setcookie("rows[$rowName][y]", $y);
-//    setcookie("rows[$rowName][isInside]", $isInside);
-//    setcookie("rows[$rowName][currentTime]", $currentTime);
-//    setcookie("rows[$rowName][scriptWorkTime]", $scriptWorkTime);
 
     $isInsideSign = $isInside ? "&#10004": "&#10008";
 

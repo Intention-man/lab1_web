@@ -1,5 +1,6 @@
 for (let i = -4; i < 5; i++) {
     let p = document.createElement("p");
+    p.className
     p.id = 'p_x_' + i;
     p.innerText = i.toString();
     let input = document.createElement("input");
