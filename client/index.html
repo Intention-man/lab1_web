@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/table.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <script src="scripts/validate.js"></script>
     <title>ЛР1 по Вебу</title>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <div class="header">
+            <p>Агей Михаил Александрович</p>
+            <p>P3217</p>
+            <p>Вариант 2709</p>
+        </div>
         <img src="static/lab1_web_chart.jpg"/>
         <form action="../server/main.php" method="post">
             <label for="x_checkbox">Значение X</label>
@@ -19,7 +24,6 @@
             <p onchange="setSendAvailability()">Значение R &isin; (1; 4)<input type="text" name="r" /></p>
             <input id="send_button" type="submit" value="Проверить попадание точки в область" disabled/>
         </form>
-
     </div>
 </body>
 </html>

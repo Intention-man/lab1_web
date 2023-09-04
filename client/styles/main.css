@@ -1,3 +1,27 @@
+* {
+    --default_green: #22EE55;
+    --complementary_green: #009900;
+    --default_grey: #EEEEEE;
+    --default_border_radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.container > * {
+    width: max-content;
+}
+
+.header{
+    width: max-content;
+    border: solid 3px var(--complementary_green);
+    border-radius: var(--default_border_radius);
+}
+
 .send_button {
     
 }
