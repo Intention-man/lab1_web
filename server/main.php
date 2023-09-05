@@ -43,14 +43,18 @@ try {
     $scriptWorkTime = $time_end - $time_start;
 
     $rowsCount = ($_SESSION["rows"] != null ? count($_SESSION["rows"]) : 0);
-
-    $_SESSION = array();
-    $_SESSION["rows"]["r.$rowsCount"]['r'] = $r;
-    $_SESSION["rows"]["r.$rowsCount"]['x'] = $x;
-    $_SESSION["rows"]["r.$rowsCount"]['y'] = $y;
-    $_SESSION["rows"]["r.$rowsCount"]['isInside'] = $isInside;
-    $_SESSION["rows"]["r.$rowsCount"]['currentTime'] = $currentTime;
-    $_SESSION["rows"]["r.$rowsCount"]['scriptWorkTime'] = $scriptWorkTime;
+    if ($rowsCount == 0){
+        $_SESSION["rows"] = array();
+    }
+    echo $rowsCount;
+    $array = array("r" => $r, "x" => $x, "y" => $y, "isInside" => $isInside, "currentTime" => $currentTime, "scriptWorkTime" => $scriptWorkTime);
+    $_SESSION["rows"]["r.$rowsCount"] = $array;
+//    $_SESSION["rows"]["r.$rowsCount"]['r'] = $r;
+//    $_SESSION["rows"]["r.$rowsCount"]['x'] = $x;
+//    $_SESSION["rows"]["r.$rowsCount"]['y'] = $y;
+//    $_SESSION["rows"]["r.$rowsCount"]['isInside'] = $isInside;
+//    $_SESSION["rows"]["r.$rowsCount"]['currentTime'] = $currentTime;
+//    $_SESSION["rows"]["r.$rowsCount"]['scriptWorkTime'] = $scriptWorkTime;
 //    echo $_SESSION["rows[r.$rowsCount]['r']"];
 
 
@@ -72,8 +76,8 @@ try {
 
     $result .= "</div>";
 
-    header('Content-Type: application/html');
-    echo json_encode($response);
+//    header('Content-Type: application/html');
+//    echo json_encode($result);
 
     echo $result;
 } catch (Error $ex){
