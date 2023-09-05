@@ -26,12 +26,12 @@ form {
 }
 
 form > div {
-    display: block;
     margin: var(--default_margin);
+    padding: var(--default_padding);
 }
 
 
-.container, form {
+.container, form, form > div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -53,7 +53,6 @@ form > div {
     border: solid 3px var(--default_green);
     border-radius: var(--default_border_radius);
     padding: var(--default_padding);
-
 
     font-size: 20px;
     font-weight: 600;
@@ -79,11 +78,23 @@ form > div {
             0 2px 2px rgba(0,0,0,0.3),
             0 0 4px 1px rgba(0,0,0,0.2);
     /* Font styles */
+    color: var(--complementary_green);
     text-decoration: none;
+    font-family: var(--default_font_family);
+    font-size: var(--default_font_size);
+    cursor: pointer;
 }
 
-#send_button:hover {
+#send_button:enabled {
+    cursor: pointer;
+}
+
+#send_button:enabled:hover {
     background: var(--complementary_green);
     color: white;
     text-shadow: unset;
+}
+
+#send_button:disabled {
+    background: var(--default_grey);
 }

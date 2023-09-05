@@ -5,10 +5,13 @@
     --default_border_radius: 10px;
     --default_margin: 20px;
     --default_font_size: 18px;
+    --default_padding: 10px 15px;
+    --default_font_family: monospace;
 }
 
 body {
     font-size: var(--default_font_size);
+    font-family: var(--default_font_family);
 }
 
 
