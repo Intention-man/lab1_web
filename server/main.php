@@ -35,20 +35,20 @@ try {
     }
 
     $isInside = (isInFirst($r, $x, $y) || isInSecond($r, $x, $y) || isInFourth($r, $x, $y));
-//    echo $isInside;
+    $isInsideSign = $isInside ? "&#10004": "&#10008";
 
+    $time = new DateTime();
     date_default_timezone_set('Europe/Moscow');
-    $currentTime = date('m/d/Y h:i:s a', time());
+//    $currentTime = date('m/d/Y h:i:s a', time());
+    $currentTime = (isset($_POST["currentTime"]) && strlen($_POST["currentTime"]) > 0) ? $_POST["currentTime"] : date('m/d/Y h:i:s a', time());;
 
-//    echo $currentTime;
     $time_end = microtime(true);
     $scriptWorkTime = $time_end - $time_start;
 
     $rowsCount = (isset($_COOKIE["rows"]) ? count($_COOKIE["rows"]) : 0);
-
     $rowName = "r.$rowsCount";
 
-    $isInsideSign = $isInside ? "&#10004": "&#10008";
+
 
     $array = array("r" => $r, "x" => $x, "y" => $y, "isInside" => $isInsideSign, "currentTime" => $currentTime, "scriptWorkTime" => $scriptWorkTime);
     $serializedArray = serialize($array);
@@ -86,8 +86,19 @@ try {
 
     echo($result);
 
+//    $doc = new DOMDocument();
+//    $doc->loadHTML($result);
+//    echo $doc->saveHTML();
+
+////    echo($result);
+//    $doc = new DOMDocument;
+//
+//    $newnode = $doc->appendChild(htmlspecialchars_decode($result));
+
+
 } catch (Error $ex) {
-    echo($ex);
+//    echo ("<script>alert($ex)</script>");
+    echo("<h1>Incorrect Data</h1>");
 }
 ?>
 
