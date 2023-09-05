@@ -82,7 +82,6 @@ form > div {
     text-decoration: none;
     font-family: var(--default_font_family);
     font-size: var(--default_font_size);
-    cursor: pointer;
 }
 
 #send_button:enabled {

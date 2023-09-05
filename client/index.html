@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <script src="scripts/validate.js"></script>
-    <title>ЛР1 по Вебу</title>
+    <title>Lab 1 on Web</title>
 </head>
 <body>
     <div class="container">
@@ -16,26 +16,23 @@
         <img src="static/lab1_web_chart.jpg"/>
         <form action="../server/main.php" method="post">
             <div>
-                <label>Значение R &isin; (1; 4)</label>
+                <label>Value R &isin; (1; 4)</label>
                 <input type="text" name="r" onchange="setSendAvailability()"/>
             </div>
 
             <div>
-                <label for="x_checkbox">Значение X  &isin; [-4; 4]</label>
+                <label for="x_checkbox">Value X  &isin; [-4; 4]</label>
                 <div id="x_checkbox">
                     <script src="scripts/checkboxDisplay.js"></script>
                 </div>
             </div>
-
-
-
             <div>
-                <label>Значение Y &isin; (-3; 5)</label>
+                <label>Value Y &isin; (-3; 5)</label>
                 <input type="text" name="y" onchange="setSendAvailability()"/>
             </div>
 
 
-            <input id="send_button" type="submit" value="Проверить попадание точки в область" disabled/>
+            <input id="send_button" type="submit" value="Check the hit" disabled/>
         </form>
     </div>
 </body>
