@@ -53,7 +53,7 @@ try {
         if ($rowsCount == 0){
             $_SESSION["rows"] = array();
         }
-        $array = array("r" => $r, "x" => $x, "y" => $y, "isInside" => $isInside, "currentTime" => $currentTime, "scriptWorkTime" => $scriptWorkTime);
+        $array = array("r" => $r, "x" => $x, "y" => $y, "isInside" => $isInsideSign, "currentTime" => $currentTime, "scriptWorkTime" => $scriptWorkTime);
         $_SESSION["rows"][$rowName] = $array;
 
 
@@ -86,7 +86,7 @@ try {
 //        }
 //        $table .= "</tr>";
 //    }
-        $table.= "<td>$r</td><td>$x</td><td>$y</td><td>$isInsideSign</td><td>$currentTime</td><td>$scriptWorkTime</td>";
+//        $table.= "<td>$r</td><td>$x</td><td>$y</td><td>$isInsideSign</td><td>$currentTime</td><td>$scriptWorkTime</td>";
 
         $table .= "</tbody></table>";
 
