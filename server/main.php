@@ -41,9 +41,7 @@ try {
         $isInsideSign = $isInside ? "&#10004": "&#10008";
 
         $time = new DateTime();
-//        echo $_POST["currentTime"];
         date_default_timezone_set($_POST["currentTime"]);
-//    $currentTime = date('m/d/Y h:i:s a', time());
         $currentTime = date('m/d/Y h:i:s a', time());
 
         $time_end = microtime(true);
@@ -80,16 +78,6 @@ try {
             $table.= "</tr>";
         }
 
-//    foreach ($_COOKIE["rows"] as $rowName => $serializedArray) {
-//        $table .= "<tr>";
-//        $array = unserialize($serializedArray);
-//        foreach ($array as $elIndex => $elValue) {
-//            $table .= "<td>$elValue</td>";
-//        }
-//        $table .= "</tr>";
-//    }
-//        $table.= "<td>$r</td><td>$x</td><td>$y</td><td>$isInsideSign</td><td>$currentTime</td><td>$scriptWorkTime</td>";
-
         $table .= "</tbody></table>";
 
         $result .= $table;
@@ -97,63 +85,11 @@ try {
 
         echo($result);
 
-//    $doc = new DOMDocument();
-//    $doc->loadHTML($result);
-//    echo $doc->saveHTML();
-
-////    echo($result);
-//    $doc = new DOMDocument;
-//
-//    $newnode = $doc->appendChild(htmlspecialchars_decode($result));
     } else {
         echo("<h1>Incorrect Data</h1>");
     }
 
-
-
-
 } catch (Error $ex) {
-//    echo ("<script>alert($ex)</script>");
     echo("<h1>Incorrect Data</h1>");
 }
 ?>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang='ru'>-->
-<!--<head>-->
-<!--    <meta charset='utf-8'>-->
-<!--    <title>Подключение css 3-мя способами!</title>-->
-<!--    <link rel="stylesheet" type="text/css" href="styles/table.css">-->
-<!--</head>-->
-<!---->
-<!--<body>-->
-<!--    <div>-->
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th>R</th>-->
-<!--            <th>X</th>-->
-<!--            <th>Y</th>-->
-<!--            <th>Is inside</th>-->
-<!--            <th>Current time</th>-->
-<!--            <th>Script Work Time</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        --><?php
-//        foreach ($_COOKIE["rows"] as $rowIndex => $array) {
-//            echo "<tr>";
-//            foreach ($array as $elIndex => $elValue) {
-//                echo "<td>$elValue</td>";
-//            }
-//            echo "</tr>";
-//        }
-//        ?>
-<!--        </tbody>-->
-<!--    </table>-->
-<!---->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
-
-
