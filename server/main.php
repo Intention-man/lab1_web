@@ -4,12 +4,10 @@ function isInFirst($r, $x, $y)
     return ($x >= 0 && $y >= 0 && ($x ** 2 + $y ** 2 <= ($r / 2) ** 2));
 }
 
-
 function isInSecond($r, $x, $y)
 {
     return ($x <= 0 && $y >= 0 && $x >= -$r / 2 && $y <= $r);
 }
-
 
 function isInFourth($r, $x, $y)
 {
