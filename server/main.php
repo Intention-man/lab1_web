@@ -44,15 +44,15 @@ try {
         date_default_timezone_set($_POST["currentTime"]);
         $currentTime = date('m/d/Y h:i:s a', time());
 
-        $time_end = microtime(true);
-        $scriptWorkTime = $time_end - $time_start;
-
         $rowsCount = (isset($_SESSION["rows"]) ? count($_SESSION["rows"]) : 0);
         $rowName = "r.$rowsCount";
 
         if ($rowsCount == 0){
             $_SESSION["rows"] = array();
         }
+
+        $time_end = microtime(true);
+        $scriptWorkTime = sprintf("%.7f", (10 ** 6) * ($time_end - $time_start)) . " мкc";
         $array = array("r" => $r, "x" => $x, "y" => $y, "isInside" => $isInsideSign, "currentTime" => $currentTime, "scriptWorkTime" => $scriptWorkTime);
         $_SESSION["rows"][$rowName] = $array;
 

@@ -17,7 +17,7 @@
         <form action="../server/main.php" method="post" id="form">
             <div>
                 <label>Value R &isin; (1; 4)</label>
-                <input type="text" name="r" onchange="setSendAvailability()"/>
+                <input type="text" maxlength="12" name="r" onchange="setSendAvailability()"/>
             </div>
             <div>
                 <label for="x_checkbox">Value X  &isin; [-4; 4]</label>
@@ -27,10 +27,10 @@
             </div>
             <div>
                 <label>Value Y &isin; (-3; 5)</label>
-                <input type="text" name="y" onchange="setSendAvailability()"/>
+                <input type="text" maxlength="12" name="y" onchange="setSendAvailability()"/>
             </div>
 
-            <script src="scripts/setData.js"></script>
+            <script src="scripts/setDate.js"></script>
 
             <input id="send_button" type="submit" value="Check the hit" disabled/>
         </form>
